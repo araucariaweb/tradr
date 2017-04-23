@@ -1,134 +1,70 @@
-
-
-<?php
-// Set the JSON header
-header("Content-type: text/json");
-
-// The x value is the current JavaScript time, which is the Unix time multiplied by 1000.
- $x = time() * 1000;
-// The y value is a random number
-// $y = rand(0, 100);
-
-$start = 1000;
-$below = -10;
-$above = 10;
-$y= mt_rand(
-    (integer) $start - ($start * (abs($below) / 100)),
-    (integer) $start + ($start* ($above / 100))
-);
-
-// Create a PHP array and echo it as JSON
-$ret = array($x, $y);
-echo json_encode($ret);
-// print_r ($ret );
-// echo $x.",".$y;
-
-// print_r (file_get_contents('http://www.highcharts.com/studies/live-server-data.php'));
-
-
-?>
-
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Trayd</title>
-		
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-		
-		<!-- 1. Add these JavaScript inclusions in the head of your page -->
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.js"></script>
-		<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
-		
-		
-		<!-- 2. Add the JavaScript to initialize the chart on document ready -->
-		<script>
-		var chart; // global
-		
-		// Request data from the server, add it to the graph and set a timeout to request again
+<script type="text/javasript">
 	
-		function requestData() {
-			$.ajax({
-				url: 'http://www.highcharts.com/studies/live-server-data.php', 
-				success: function(point) {
-					var series = chart.series[0],
-						shift = series.data.length > 20; // shift if the series is longer than 20
-		
-					// add the point
-					chart.series[0].addPoint(eval(point), true, shift);
-					
-					// call it again after one second
-					setTimeout(requestData, 1000);	
-				},
-				cache: false
-			});
-		}
-			
-		$(document).ready(function() {
-			chart = new Highcharts.Chart({
-				chart: {
-					renderTo: 'container',
-					defaultSeriesType: 'line',
-					events: {
-						load: requestData
-					}
-				},
-				title: {
-					text: 'Live Prices'
-				},
-				xAxis: {
-					type: 'datetime',
-					tickPixelInterval: 150,
-					maxZoom: 20 * 1000
-				},
-				yAxis: {
-					minPadding: 0.2,
-					maxPadding: 0.2,
-					title: {
-						text: 'Value',
-						margin: 30
-					}
-				},
-				series: [{
-					name: 'Stock Price',
-					data: []
-				}]
-			});		
-		});
-		</script>
-		
-	</head>
+Highcharts.setOptions({
+    global: {
+        useUTC: false
+    }
+});
 
-	<body>
-		
-		<!-- 3. Add the container -->
+// Create the chart
+Highcharts.stockChart('container', {
+    chart: {
+        events: {
+            load: function () {
 
+                // set up the updating of the chart each second
+                var series = this.series[0];
+                setInterval(function () {
+                    var x = (new Date()).getTime(), // current time
+                        y = Math.round(Math.random() * 100);
+                    series.addPoint([x, y], true, true);
+                }, 1000);
+            }
+        }
+    },
 
+    rangeSelector: {
+        buttons: [{
+            count: 1,
+            type: 'minute',
+            text: '1M'
+        }, {
+            count: 5,
+            type: 'minute',
+            text: '5M'
+        }, {
+            type: 'all',
+            text: 'All'
+        }],
+        inputEnabled: false,
+        selected: 0
+    },
 
-  <div class="container">
-    <h1>Trayd</h1>
+    title: {
+        text: 'Live random data'
+    },
 
- <div id="chart_div"></div>
-		<div id="container" style="height: 400px"></div>
-		
-		<div>
-			   <form method="GET">
-               <div class="form-group">
-                  <label for="buy">Buying shares</label>
-                 <input type="number" name = "buyNum" class="form-control" id="buyNum" aria-describedby="Buying" placeholder="How many shares?" </input>
-                 <label for="sell">Selling shares</label>
-                 <input type="number" name = "sellNum" class="form-control" id="sellNum" aria-describedby="Selling" placeholder="How many shares?" </input>
-             </div>
-		<button name = "buy" type="submit" id="buy" class="btn btn-primary">Buy</button>
-                <button name = "sell" type="submit" id="sell" class="btn btn-secondary">Sell</button>
+    exporting: {
+        enabled: false
+    },
 
-	</form>
-				
-		</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  </body>
+    series: [{
+        name: 'Random data',
+        data: (function () {
+            // generate an array of random data
+            var data = [],
+                time = (new Date()).getTime(),
+                i;
 
-</html>
+            for (i = -999; i <= 0; i += 1) {
+                data.push([
+                    time + i * 1000,
+                    Math.round(Math.random() * 100)
+                ]);
+            }
+            return data;
+        }())
+    }]
+});
+
+</script>
