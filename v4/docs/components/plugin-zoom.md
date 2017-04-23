@@ -4,6 +4,4 @@ The zoom plugin provides simple image zoom functionality. Add a `data-action="zo
 
 ### Data API
 
-{% example html %}
 <img data-action="zoom" style="width: 150px;" src="{{ relative }}assets/img/avatar-mdo.png">
-{% endexample %}
