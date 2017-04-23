@@ -2,7 +2,6 @@
 
 Featured lists are common marketing components used for associating visual icons with a list of topics.
 
-{% example html %}
 <div class="container-fluid">
   <div class="row my-4">
     <div class="col-sm-6">
@@ -55,4 +54,4 @@ Featured lists are common marketing components used for associating visual icons
     </div>
   </div>
 </div>
-{% endexample %}
+
