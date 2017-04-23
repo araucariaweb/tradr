@@ -1,6 +1,5 @@
 ## Media list steam
 
-{% example html %}
 <ul class="media-list media-list-stream mb-3">
   <li class="media list-group-item p-4">
     <img class="media-object mr-3 align-self-start" src="{{ relative }}assets/img/avatar-mdo.png">
@@ -32,4 +31,3 @@
     </div>
   </li>
 </ul>
-{% endexample %}
