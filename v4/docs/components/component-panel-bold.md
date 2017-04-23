@@ -2,7 +2,6 @@
 
 Bold variants for Bootstrap's panel component, featuring vibrant solid color blocks.
 
-{% example html %}
 <div class="row">
   <div class="col-md-6">
     <div class="panel panel-bold panel-danger">
@@ -25,4 +24,3 @@ Bold variants for Bootstrap's panel component, featuring vibrant solid color blo
     </div>
   </div>
 </div>
-{% endexample %}
