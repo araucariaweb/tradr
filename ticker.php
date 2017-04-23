@@ -51,7 +51,7 @@ echo json_encode($ret);
 	
 		function requestData() {
 			$.ajax({
-				url: 'live-server-data.php', 
+				url: 'http://www.highcharts.com/studies/live-server-data.php', 
 				success: function(point) {
 					var series = chart.series[0],
 						shift = series.data.length > 20; // shift if the series is longer than 20
