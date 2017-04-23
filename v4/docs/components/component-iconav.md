@@ -2,7 +2,6 @@
 
 The icon nav is a special sidebar navigation for this toolkit. In mobile viewports, the icon nav is horizontal with icons and textual labels. On larger devices the icon nav changes and becomes affixed to the side of the viewport with tooltips instead of textual labels.
 
-{% example html %}
 <nav class="iconav">
     <a class="iconav-brand" href="#">
       <span class="icon icon-leaf iconav-brand-icon"></span>
@@ -54,4 +53,3 @@ The icon nav is a special sidebar navigation for this toolkit. In mobile viewpor
       </ul>
     </div>
   </nav>
-{% endexample %}
