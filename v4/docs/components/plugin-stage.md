@@ -22,7 +22,7 @@ Be sure to match any `data-distance` values with the CSS-based `width` on the `.
 
 For an interactive demo, refer to the `Menu` button at the top of this page. **The example below shows the minimal required markup.**
 
-{% highlight html %}
+
 <div class="stage">
   <button class="btn btn-link stage-toggle" data-target=".stage" data-toggle="stage">
     <span class="icon icon-menu"></span>
@@ -35,11 +35,10 @@ For an interactive demo, refer to the `Menu` button at the top of this page. **T
 
   <!-- All other page content -->
 </div>
-{% endhighlight %}
+
 
 For a right-aligned stage shelf and button, the **minimal required markup looks like this:**
 
-{% highlight html %}
 <div class="stage">
   <button class="btn btn-link stage-toggle stage-toggle-right" data-target=".stage" data-toggle="stage" data-distance="-250">
     <span class="icon icon-menu"></span>
@@ -52,4 +51,3 @@ For a right-aligned stage shelf and button, the **minimal required markup looks 
 
   <!-- All other page content -->
 </div>
-{% endhighlight %}
