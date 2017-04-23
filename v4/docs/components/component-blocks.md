@@ -2,27 +2,24 @@
 
 Blocks are a brand new composing metaphor exclusively for use with our Marketing toolkit. Build your site up by stacking several blocks on top of each other to provide focused, attention grabbing units of content.
 
-{% example html %}
+
 <div class="block text-center">
   <h1 class="block-title">A basic block</h1>
   <h4 class="text-muted">Use these to package stackable, image driven content.</h4>
   <button class="btn btn-primary mt-1">With a simple button</button>
 </div>
-{% endexample %}
+
 
 We have several basic block types, including an inverse block.
 
-{% example html %}
 <div class="block block-inverse text-center">
   <h1 class="block-title">An inverse block</h1>
   <h4 class="text-muted">Use the inverse modifier for working over dark images.</h4>
   <button class="btn btn-primary mt-1">With a simple button</button>
 </div>
-{% endexample %}
 
 We've also made it easy to integrate embeded content for more interactive block backgrounds.
 
-{% example html %}
 <div class="block block-inverse text-center">
   <div class="block-foreground">
     <h1 class="block-title">An embed block</h1>
@@ -33,11 +30,9 @@ We've also made it easy to integrate embeded content for more interactive block 
     <iframe frameBorder="0" src="https://a.tiles.mapbox.com/v4/jacobthornton.6681fb42/attribution.html?access_token=pk.eyJ1IjoiamFjb2J0aG9ybnRvbiIsImEiOiJlMGRmZmJlNDZkNDhlN2EzMTQ0YWFiNjhlN2RiZWY1ZCJ9.hO-UNIIplnebJYkya-8TEQ"></iframe>
   </div>
 </div>
-{% endexample %}
 
 Use different modifiers like `block-bordered` and `block-angle` to experiment with different visual treatments and flows between your blocks.
 
-{% example html %}
 <div class="block text-center">
   <div class="container-fluid">
     <h4 class="mb-4">
@@ -64,11 +59,9 @@ Use different modifiers like `block-bordered` and `block-angle` to experiment wi
     </blockquote>
   </div>
 </div>
-{% endexample %}
 
 Use the `block-fill-height` modifier to make your block fill a user's screen, and then use the responsive alignment classes like `block-xs-middle` or `block-md-bottom` to align your content within the block.
 
-{% example html %}
 <div class="block block-fill-height text-center">
   <div class="block-xs-bottom">
     <div class="container-fluid">
@@ -81,4 +74,3 @@ Use the `block-fill-height` modifier to make your block fill a user's screen, an
     </div>
   </div>
 </div>
-{% endexample %}
