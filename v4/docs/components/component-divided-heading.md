@@ -2,17 +2,14 @@
 
 Use a divided heading to call special attention to a separation of content in your pages.
 
-{% example html %}
 <div class="hr-divider">
   <h3 class="hr-divider-content hr-divider-heading">
     Divider heading
   </h3>
 </div>
-{% endexample %}
 
 You can also use it with pill navigation:
 
-{% example html %}
 <div class="hr-divider">
   <ul class="nav nav-pills hr-divider-content hr-divider-nav">
     <li class="nav-item">
@@ -26,4 +23,3 @@ You can also use it with pill navigation:
     </li>
   </ul>
 </div>
-{% endexample %}
