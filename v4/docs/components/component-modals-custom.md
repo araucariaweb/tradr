@@ -2,7 +2,6 @@
 
 Support for multiple, stackable modal bodies and scrolling bodies using the new `.modal-body-scroller` modifier.
 
-{% example html%}
 <div class="modal">
   <div class="modal-dialog modal-md">
     <div class="modal-content">
@@ -34,11 +33,9 @@ Support for multiple, stackable modal bodies and scrolling bodies using the new 
     </div>
   </div>
 </div>
-{% endexample %}
 
 Also, drop the regular footer for a new two-up set of actions using the `.modal-actions` component.
 
-{% example html%}
 <div class="modal">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
@@ -58,4 +55,3 @@ Also, drop the regular footer for a new two-up set of actions using the `.modal-
     </div>
   </div>
 </div>
-{% endexample %}
