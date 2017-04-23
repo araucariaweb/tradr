@@ -2,7 +2,7 @@
 
 Use the flex table classes when you need to keep related elements on the same row, but with flexible individual widths.
 
-{% example html %}
+
 <div class="flextable">
   <div class="flextable-item flextable-primary">
     <input type="text" class="form-control" placeholder="Search orders">
@@ -18,4 +18,4 @@ Use the flex table classes when you need to keep related elements on the same ro
     </div>
   </div>
 </div>
-{% endexample %}
+
