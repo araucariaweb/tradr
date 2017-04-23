@@ -16,7 +16,6 @@ $('.js-enter').enter()
 
 ### Data API
 
-{% example html %}
 <div style="overflow: hidden">
   <div data-transition="entrance" style="transform: translateY(50px)">
     <p>
@@ -27,4 +26,3 @@ $('.js-enter').enter()
     </p>
   </div>
 </div>
-{% endexample %}
