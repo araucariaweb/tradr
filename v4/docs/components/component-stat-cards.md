@@ -2,7 +2,6 @@
 
 Use stat cards to easily display large numbers, great for any kind of simple metrics and dashboard content.
 
-{% example html %}
 <div class="statcard p-3">
   <h3 class="statcard-number">12,938</h3>
   <span class="statcard-desc">Page views</span>
@@ -15,11 +14,10 @@ Use stat cards to easily display large numbers, great for any kind of simple met
   <h3 class="statcard-number">1,293</h3>
   <span class="statcard-desc">Sign-ups</span>
 </div>
-{% endexample %}
 
 With optional carets:
 
-{% example html %}
+
 <div class="statcard p-3">
   <h3 class="statcard-number">
     12,938
@@ -34,11 +32,11 @@ With optional carets:
   </h3>
   <span class="statcard-desc">Downloads</span>
 </div>
-{% endexample %}
+
 
 With background variations:
 
-{% example html %}
+
 <div class="statcard statcard-primary p-4 mb-2">
   <h3 class="statcard-number">
     12,938
@@ -74,11 +72,11 @@ With background variations:
   </h3>
   <span class="statcard-desc">Sign-ups</span>
 </div>
-{% endexample %}
+
 
 And use the grid system to size and align them:
 
-{% example html %}
+
 <div class="row">
   <div class="col-sm-6">
     <div class="statcard statcard-primary p-4">
@@ -99,4 +97,4 @@ And use the grid system to size and align them:
     </div>
   </div>
 </div>
-{% endexample %}
+
