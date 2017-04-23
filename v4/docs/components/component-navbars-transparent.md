@@ -2,7 +2,6 @@
 
 Use the new `.navbar-transparent` variation for placing navbars over backgrounds and interactive content.
 
-{% example html %}
 <div class="py-5 px-1" style="background: url({{ relative }}assets/img/kanye.jpg) top center; background-size: cover">
 
   <nav class="navbar navbar-transparent navbar-padded navbar-toggleable-sm">
@@ -37,4 +36,3 @@ Use the new `.navbar-transparent` variation for placing navbars over backgrounds
   </nav>
 
 </div>
-{% endexample %}
