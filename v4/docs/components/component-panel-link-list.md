@@ -2,7 +2,6 @@
 
 Simple card modifier for link lists.
 
-{% example html %}
 <div class="card card-link-list">
   <div class="card-block">
     © 2015 Bootstrap
@@ -22,4 +21,3 @@ Simple card modifier for link lists.
     <a href="#">Advertise</a>
   </div>
 </div>
-{% endexample %}
