@@ -1,8 +1,7 @@
 ## Avatar list
 
-Join a series of icons into a single horizontal grouping.
+<!--Join a series of icons into a single horizontal grouping.-->
 
-{% example html %}
 <ul class="avatar-list">
   <li class="avatar-list-item">
     <img class="rounded-circle" src="{{ relative }}assets/img/avatar-dhg.png">
@@ -14,4 +13,4 @@ Join a series of icons into a single horizontal grouping.
     <img class="rounded-circle" src="{{ relative }}assets/img/avatar-fat.jpg">
   </li>
 </ul>
-{% endexample %}
+
