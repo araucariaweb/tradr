@@ -2,7 +2,6 @@
 
 The dashhead is a custom component built to house all the textual headings, form controls, buttons, and more that are common for the top of dashboard page.
 
-{% example html %}
 <div class="dashhead">
   <div class="dashhead-titles">
     <h6 class="dashhead-subtitle">Dashboards</h6>
@@ -22,4 +21,3 @@ The dashhead is a custom component built to house all the textual headings, form
     </div>
   </div>
 </div>
-{% endexample %}
