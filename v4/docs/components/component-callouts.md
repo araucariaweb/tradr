@@ -2,7 +2,6 @@
 
 Use callouts to quickly draw attention to specific actions with an extended explanation.
 
-{% example html %}
 <div class="callout">
   <div class="callout-content">
     <strong>Explore this thing.</strong> Learn more about this thing.
@@ -12,4 +11,3 @@ Use callouts to quickly draw attention to specific actions with an extended expl
     <button class="btn btn-primary">Get started</button>
   </div>
 </div>
-{% endexample %}
