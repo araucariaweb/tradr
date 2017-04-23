@@ -2,7 +2,6 @@
 
 The light carousel is a modified version of Bootstrap's default carousel, using lighter styles on all carousel controls.
 
-{% example html %}
 <div id="carousel-example-generic-2" class="carousel carousel-light slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic-2" data-slide-to="0" class="active"></li>
@@ -29,4 +28,3 @@ The light carousel is a modified version of Bootstrap's default carousel, using 
     <span class="sr-only">Next</span>
   </a>
 </div>
-{% endexample %}
