@@ -63,7 +63,7 @@ Including in this theme is [Tablesorter](http://tablesorter.com/), a jQuery plug
 
 Enabling Tablesorter is easy with jQuery:
 
-{% highlight js %}
+
 $(document).ready(function() {
   // call the tablesorter plugin
   $("[data-sort=table]").tablesorter({
@@ -71,4 +71,4 @@ $(document).ready(function() {
     sortList: [[1,0]]
   });
 });
-{% endhighlight %}
+
